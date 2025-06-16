@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+      html, body {
+        overflow-x: hidden;
+        font-family: "Sora", sans-serif;
+      }
+      .hero {
+        height: 640px;
+        background-image: url('assets/hero.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      }
+      .number {
+      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .card {
+      transition: all 0.5s ease;
+      background-color: white;
+      color: black;
+      border-radius: 0;
+    }
+    .card:hover {
+      background-color: black;
+      color: white;
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+    .mar {
+      margin-top: 100px;
+    }
+    .pad {
+      padding-block: 100px;
+    }
+    .round {
+      border-top-right-radius: 5%;
+      border-bottom-right-radius: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md" x-data="{ open : false }">
+      <div class="container">
+        <a class="navbar-brand fw-bold">
+          Navbar
+        </a>
+        <button class="navbar-toggler" @click="open = !open">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" :class="{ show : open }">
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link">Home</a>
+            <a class="nav-link">Pricing</a>
+            <a class="nav-link">About</a>
+            <a class="nav-link">Contact us</a>
+          </div>
+          <div>
+            <button class="btn btn-outline-dark">Log In</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- hero -->
+    <section class="row hero">
+      <div class="col-md align-self-center text-center text-white">
+        <div class="container">
+        <h1 class="display-3 fw-bold text-shadow">Tingkatkan Skill Anda<br>Capai Karier Impian!</h1>
+        <p class="lead text-shadow">Belajar langsung dari para ahli melalui kursus online interaktif dan bersertifikat. Pelatihan online praktis, fleksibel, dan mudah diakses. Cocok untuk pemula maupun profesional. Pilih kursus sesuai minat dan mulai belajar hari ini!</p>
+        <a class="btn btn-danger mt-3">Discover more</a>
+        </div>
+      </div>
+    </section>
+    
+  <!-- Kursus populer -->
+    <div class=" container mar">
+      <div class="row">
+        <div class="col-md text-center">
+          <h1 class="fw-bold">Kursus Populer</h1>
+          <p class="lead">Beberapa kursus populer yang tersedia</p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-3 p-3 text-center">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="display-1"><i class="bi bi-layout-text-window-reverse"></i></p>
+              <h5 class="card-title">Web Development</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-3 text-center">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="display-1"><i class="bi bi-pc-display-horizontal"></i></p>
+              <h5 class="card-title">Digital Marketing</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-3 text-center">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="display-1"><i class="bi bi-bar-chart-fill"></i></p>
+              <h5 class="card-title">Data Science</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-3 text-center">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="display-1"><i class="bi bi-megaphone"></i></p>
+              <h5 class="card-title">Public Speaking</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  <!-- keunggulan kami -->
+    <div class="bg-dark text-white mar pad">
+      <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-7">
+          <img src="assets/subhead.jpg" class="img-fluid round">
+        </div>
+        <div class="col-lg-5 align-self-center ps-5">
+          <h1 class="fw-bold mt-3 mb-4">Keunggulan Kami</h1>
+          <ol>
+            <li class="h3"><strong>Instruktur Berpengalaman</strong><br><p class="lead">Belajar langsung dari praktisi industri.</p></li>
+            <li class="h3"><strong>Materi Up-to-Date</strong><br><p class="lead">Disusun berdasarkan kebutuhan pasar kerja saat ini.</p></li>
+            <li class="h3"><strong>Fleksibel</strong><br><p class="lead">Belajar kapan saja, di mana saja.</p></li>
+            <li class="h3"><strong>Sertifikat Resmi</strong><br><p class="lead">Tambahkan nilai lebih untuk CV Anda.</p></li>
+            <li class="h3"><strong>Komunitas Aktif</strong><br><p class="lead">Diskusi dan networking sesama peserta.</p></li>
+          </ol>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <!-- Testiomni -->
+    <div class="container mar text-center">
+      <div class="row">
+        <div class="col-md">
+          <h1 class="fw-bold">Testimoni Peserta</h1>
+        </div>
+      </div>
+      <div class="container row mt-5 justify-content-around">
+          <div class="col-md-3 border p-4 shadow rounded-4 m-3">
+            <p class="lead">Setelah ikut kursus ini, saya berhasil mendapat pekerjaan impian saya sebagai Front-End Developer!”</p>
+            <p class="blockquote-footer">Rizky, 24 tahun</p>
+          </div>
+          <div class="col-md-3 border p-4 shadow rounded-4 m-3">
+            <p class="lead">Setelah ikut kursus ini, saya berhasil mendapat pekerjaan impian saya sebagai Front-End Developer!”</p>
+            <p class="blockquote-footer">Rizky, 24 tahun</p>
+          </div>
+          <div class="col-md-3 border p-4 shadow rounded-4 m-3">
+            <p class="lead">Setelah ikut kursus ini, saya berhasil mendapat pekerjaan impian saya sebagai Front-End Developer!”</p>
+            <p class="blockquote-footer">Rizky, 24 tahun</p>
+          </div>
+      </div>
+    </div>
+    
+    <!-- CTA Call to Action -->
+    <div class="mar pad bg-dark text-white text-center">
+      <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h1 class="fw-bold">Mulai Kursus Pertamamu Sekarang</h1>
+          <p class="lead">Gabung lebih dari 10.000 peserta lain dan tingkatkan kemampuanmu hari ini!</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4 mx-auto">
+          <form class="form" method="post">
+            <p><input type="text" name="nama" class="form-control" placeholder="Nama Kamu"></p>
+            <p><input type="email" name="email" class="form-control" placeholder="Email@gmail.com"></p>
+            <p><input type="number" name="nohp" class="form-control" placeholder="No Hp : 0812345678"></p>
+            <p><input type="textarea" name="message" class="form-control" placeholder="message" style="height : 10rem"></p>
+            <button class="btn btn-outline-light" type="submit">Submit!</button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md align-self-center p-4">
+          <p class="fw-light">Copyrights ©2025 All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
